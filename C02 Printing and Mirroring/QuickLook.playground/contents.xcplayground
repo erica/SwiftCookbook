@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<playground version='6.0' target-platform='osx'>
+    <pages>
+        <page name='Intro'/>
+        <page name='Built In Quick Look'/>
+        <page name='CustomPlaygroundQuickLookable'/>
+        <page name='CPQL 2'/>
+    </pages>
+</playground>

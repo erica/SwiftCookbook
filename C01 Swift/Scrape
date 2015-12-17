@@ -1,0 +1,20 @@
+#!/usr/bin/xcrun swift
+import Cocoa
+var arguments = Process.arguments
+for appID in arguments.dropFirst() {
+    let urlString = "https://itunes.apple.com/lookup?id=\(appID)"
+    guard let url = NSURL(string:urlString) else {continue}
+    guard let data = NSData(contentsOfURL: url) else {continue}
+    if let json =
+        try NSJSONSerialization.JSONObjectWithData(data,
+        options: []) as? NSDictionary,
+        resultsList = json["results"] as? NSArray,
+        results = resultsList.firstObject as? NSDictionary,
+        name = results["trackName"] as? String,
+        price = results["price"] as? NSNumber {
+            let words = name.characters.split(
+                isSeparator:{$0 == ":" || $0 == "-"}).map(String.init)
+            let n = words.first!
+            print ("\(n): \(price)")
+    }
+}

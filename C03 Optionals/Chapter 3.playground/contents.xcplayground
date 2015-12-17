@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<playground version='6.0' target-platform='ios' display-mode='raw'>
+    <pages>
+        <page name='Basic Optionals'/>
+        <page name='Safer Unwrapping'/>
+        <page name='Casting'/>
+        <page name='Guard Statement'/>
+        <page name='Implicit Unwrapping'/>
+        <page name='Coalescing and Chaining'/>
+        <page name='Selector Testing'/>
+        <page name='Mappage'/>
+        <page name='Unretained'/>
+    </pages>
+</playground>
