@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<playground version='6.0' target-platform='ios' display-mode='raw' executeOnSourceChanges='false'>
+    <pages>
+        <page name='Basics'/>
+        <page name='Labels'/>
+        <page name='Defaults'/>
+        <page name='Var Params'/>
+        <page name='Tuple Args'/>
+        <page name='Shorthand'/>
+        <page name='Inferences'/>
+        <page name='Nesting'/>
+        <page name='Tuples'/>
+        <page name='Variadics'/>
+        <page name='Capturing Values'/>
+        <page name='Capturing Values 2'/>
+        <page name='Auto Closure'/>
+        <page name='No Escape'/>
+        <page name='Currying'/>
+        <page name='Currying 2'/>
+        <page name='Currying 3'/>
+        <page name='Convention'/>
+        <page name='Test'/>
+    </pages>
+</playground>
