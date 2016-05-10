@@ -1,6 +1,12 @@
 #!/usr/bin/xcrun swift
 import Cocoa
+
 var arguments = Process.arguments
+if arguments.count == 1 {
+    print("Usage:", Process.arguments.first!, "app-id-list")
+    exit(-1)
+}
+
 for appID in arguments.dropFirst() {
     let urlString = "https://itunes.apple.com/lookup?id=\(appID)"
     guard let url = NSURL(string:urlString) else {continue}

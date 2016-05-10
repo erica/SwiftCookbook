@@ -1,8 +1,8 @@
 /*
-
-   http://ericasadun.com
-
-*/
+ 
+ http://ericasadun.com
+ 
+ */
 
 import Foundation
 
@@ -14,19 +14,19 @@ public class OutputStream: OutputStreamType {
     
     // Create with stream
     public init(_ stream: UnsafeMutablePointer<FILE>) {
-    self.stream = stream
+        self.stream = stream
     }
     
     // Create with output file
-    public init?(var path: String, append: Bool = false) {
-    path = (path as NSString).stringByExpandingTildeInPath
-    if append {
-        stream = fopen(path, "a")
-    } else {
-        stream = fopen(path, "w")
-    }
-    if stream == nil {return nil}
-    self.path = path
+    public init?(path: String, append: Bool = false) {
+        let path = (path as NSString).stringByExpandingTildeInPath
+        if append {
+            stream = fopen(path, "a")
+        } else {
+            stream = fopen(path, "w")
+        }
+        if stream == nil {return nil}
+        self.path = path
     }
     
     // stderr
